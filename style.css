@@ -1,0 +1,377 @@
+@font-face {
+    font-family: del;
+    src: url(./DELIRIUM\ NCV.ttf);
+}
+@font-face {
+    font-family: gilroy;
+    src: url(./Gilroy-Regular.ttf);
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color:#dadada;
+    overflow-x: hidden;
+}
+#nav{
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 5vw;
+}
+#nav>h1{
+    font-family: black  ops one ;
+    font-weight: 100;
+  font-size: 4vw; 
+  display: flex;
+  flex-direction: column;
+  
+  gap: 2vw;
+}
+#dets>h3{
+    font-family: del;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    /* position: absolute; */
+}
+#dets{
+    position: absolute;
+    left: 5vw;
+    top: 7vw;
+}
+#nav>#join{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+#nav>#join>h2{
+font-family: del;
+font-weight: 100;
+font-size: 2vw;
+}
+#nav>#join>i{
+    font-size: 2.5vw;
+}
+#circle{
+    background: linear-gradient(135deg,#bad8d2,#a4e8db,#75d0be,#83d2c3);
+height: 45vw;
+width: 45vw;
+border-radius: 50%;
+position: absolute;
+top: 55%;
+left: 53%;
+transform: translate(-50%,-50%);
+
+
+}
+#page1>img{
+    position: absolute;
+    height: 85vh;
+    width: 75vw;
+    bottom: 0%;
+left: 50%;
+transform: translate(-50%,0%);
+filter: drop-shadow(3px 3px 6px );
+}
+#bottom{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 10%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+}
+#bottom>#det>h1{
+    font-family: del;
+    font-size: 8vw;
+    font-weight: 100;
+    letter-spacing: 15px;
+}
+#bottom>#det>h3{
+    font-family: gilroy;
+    opacity: .5;
+    font-size: 25px;
+
+}
+#bottom>h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: del;
+    font-size: 2vw;
+    font-weight: 100;
+    letter-spacing: 5px;
+    gap: 30px;
+
+}
+#bottom>h3>i{
+    color: #7bdfcb;
+    font-size: 3vw;
+}
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color: #dadada;
+    z-index: 99;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 4vw 5vw;
+}
+#page2>h1{
+    font-family: del;
+    font-size: 9vw;
+    font-weight: 100;
+    
+}
+#page2>h3{
+    width: 50%;
+    font-family: gilroy;
+    opacity: .5;
+    font-size:15px;
+}
+#scroll{
+    width: 110%;
+    height: 60vw;
+    white-space: nowrap;
+    /* background-color: #75d0be; */
+    margin-left: -5vw;
+    display: flex;
+    gap: 50px;
+    overflow-x: auto;
+    padding: 20px 5vw;
+    /* transition: ease 1s; */
+
+}
+
+#scroll::-webkit-scrollbar{
+    display: none;
+}
+#scroll>.slides{
+    cursor: none;
+    height: 95%;
+    width: 45%;
+    background-color: pink;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    /* will-change: transform; */
+    transition:cubic-bezier(0.19, 1, 0.22, 1) .5s;
+
+}
+#scroll>.slides>img{
+    position: absolute;
+height: 100%;
+width: 100%;
+object-fit: cover;
+
+}
+.slides>img:nth-child(1){
+    filter: grayscale();
+}
+.slides>img:nth-child(2){
+   clip-path: circle(0% at 0px 0px);
+   transition:  cubic-bezier(0.19, 1, 0.22, 1) .8s;
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #dadada;
+    display: flex;
+  justify-content: center;
+  flex-direction: column;
+    padding: 0 5vw;
+    gap: 10vw;
+    position: relative;
+}
+#page3>h1{
+    font-size: 8vw;
+    font-family: gilroy;
+    margin-top: 10vw;
+}
+#page3>P{
+    width: 48%;
+    font-family: gilroy;
+    font-weight: 500;
+    opacity: .4;
+    
+}
+#img{
+    height: 80vh;
+    width: 20vw;
+    background-color: red;
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translate(0%,-50%);
+    overflow: hidden;
+    border-top-left-radius:50px ;
+    border-bottom-left-radius:10px ;
+}
+#img>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 1s;
+}
+#img:hover img{
+    transform: scale(1.1);
+}
+#page3>h2{
+    position: absolute;
+    font-size: 15vw;
+    right: 18%;
+    font-family: del;
+    z-index: 9;
+    color:rgba(0, 0, 0, 0.427);
+    font-weight: 100;
+    bottom: 0%;
+    -webkit-text-stroke: 1px white;
+}
+#page4{
+    height: 100vh;
+    width: 100%;
+    background-color: #dadada;
+display: flex;
+}
+#left{
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: pink; */
+}
+#right{
+    height: 100%;
+    width: 45%;
+    /* background-color: #83d2c3; */
+    background-image: url(https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius:100px ;
+}
+#left>h1{
+    font-family: gilroy;
+    font-size: 6vw;
+}
+#left>a{
+    text-decoration: none;
+    font-family: gilroy;
+    font-weight: 500;
+    color: black;
+    font-size: 22px;
+    letter-spacing: 4px;
+    margin-top: 10px;
+    opacity: .4;
+}
+#left>a:nth-child(2){
+    opacity: 1;
+}
+
+@media (max-width:500px) {
+    #nav>h1{
+        font-size: 10vw;
+    }
+    #dets{
+        top: 20vw;
+    }
+    #dets>h3{
+        font-size: 18px;
+    }
+    #nav>#join>h2{
+        font-size: 8vw;
+    }
+    #nav>#join>i{
+        font-size: 9vw
+    }
+    #page1>img{
+        height: 65vh;
+        width: 190vw;
+        left: 40%;
+    }
+    #circle{
+        height: 100vw;
+        width: 100vw;
+        left: 50%;
+    }
+    #bottom{
+        padding: 0 0 0 0;
+    }
+    #bottom>#det>h3{
+        font-size: 15px;
+    } 
+    #bottom>#det>h1{
+        letter-spacing: 10px;
+        font-size: 10vw;
+        font-weight: 100;
+    } 
+    #bottom>h3{
+        font-size: 8vw;
+        letter-spacing: 2px;
+        gap: 5px;
+    }
+    #bottom>h3>i{
+        font-size: 10vw;
+    }
+    #page2{
+        height: 60vh;
+    }
+    #page2>h1{
+        font-size: 25vw;
+    }
+    #page2>h3{
+        font-size: 10px;
+    }
+    #scroll{
+        margin-top: 10vw;
+        height: 80vw;
+        
+    }
+    #scroll>.slides{
+        width: 80%;
+    }
+    #img{
+        height: 50vh;
+        width: 40vw;
+    }
+    #page3>h2{
+        bottom: 18%;
+        right: 35%;
+        font-size: 30vw;
+    }
+    #page3>h1{
+        font-size: 10vw;
+    }
+    #page3>p{
+        font-size: 12px;
+    }
+    #page4{
+        flex-direction: column;
+    }
+    #page4>#left{
+        width: 100%;
+        height: 50%;
+    }
+    #page4>#right{
+        width: 100%;
+        height: 50%;
+    }
+}
